@@ -34,8 +34,14 @@ $ ./mvnw compile exec:java -Dexec.mainClass=sleuth.webmvc.Frontend
 Next, run [Zipkin](https://zipkin.io/), which stores and queries traces reported by the above services.
 
 ```bash
+
+docker run --rm -d -p 9411:9411 openzipkin/zipkin
+
+OR
+
 curl -sSL https://zipkin.io/quickstart.sh | bash -s
 java -jar zipkin.jar
+
 ```
 
 ## Configuration tips
